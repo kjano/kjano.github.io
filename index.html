@@ -1,9 +1,444 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Krzysztof Janowicz</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krzysztof Janowicz</title>
+
+<style>
+
+:root{
+--bg:#ffffff;
+--text:#3a3a3a;
+--text-soft:#6a6a6a;
+--heading:#151515;
+--line:#cfcfca;
+--accent:#8a2228;
+--max:900px;
+}
+
+*{box-sizing:border-box;}
+
+body{
+margin:0;
+background:var(--bg);
+color:var(--text);
+font-family:Georgia,"Times New Roman",serif;
+line-height:1.7;
+}
+
+.page{
+max-width:var(--max);
+margin:auto;
+padding:0 28px 60px;
+}
+
+.topmark{
+height:70px;
+margin-top:28px;
+position:relative;
+}
+
+.topmark:before{
+content:"";
+position:absolute;
+left:0;
+top:0;
+width:72%;
+height:24px;
+background:linear-gradient(
+to right,
+#111 0%,
+#111 55%,
+#999 55%,
+#999 88%,
+#111 88%,
+#111 100%);
+clip-path:polygon(0 0,100% 0,93% 100%,0 100%);
+}
+
+.topmark:after{
+content:"";
+position:absolute;
+right:0;
+top:-6px;
+width:44px;
+height:44px;
+border:9px solid #c40000;
+border-radius:50%;
+}
+
+header{
+display:grid;
+grid-template-columns:1.5fr .8fr;
+gap:24px;
+align-items:end;
+padding-bottom:26px;
+border-bottom:1px solid var(--line);
+}
+
+h1{
+margin:0;
+font-size:clamp(2.4rem,6vw,3.8rem);
+line-height:.95;
+letter-spacing:-.04em;
+color:var(--heading);
+font-weight:500;
+}
+
+.intro{
+margin-top:18px;
+max-width:40rem;
+}
+
+nav{
+display:flex;
+flex-direction:column;
+gap:8px;
+align-items:end;
+font-size:.95rem;
+}
+
+a{
+color:var(--accent);
+text-decoration:none;
+border-bottom:1px solid rgba(138,34,40,.35);
+}
+
+a:hover{
+border-bottom-color:var(--accent);
+}
+
+/* bold red highlight */
+b{
+color:var(--accent);
+font-weight:700;
+}
+
+section{
+display:grid;
+grid-template-columns:160px 1fr;
+gap:28px;
+padding:30px 0;
+border-bottom:1px solid var(--line);
+}
+
+h2{
+margin:0;
+font-size:.9rem;
+letter-spacing:.1em;
+text-transform:uppercase;
+color:var(--accent);
+}
+
+p{margin:0 0 1rem; text-align:justify;}
+
+ul{
+margin:0;
+padding-left:1rem;
+}
+
+.ideas{
+list-style:none;
+padding:0;
+}
+
+.ideas li{
+padding:.9rem 0;
+border-top:1px solid var(--line);
+}
+
+.ideas li:first-child{
+border-top:1px solid #111;
+}
+
+.idea-title{
+display:block;
+font-weight:600;
+color:var(--heading);
+margin-bottom:.2rem;
+}
+
+.students{
+list-style:none;
+padding:0;
+}
+
+.students li{
+display:grid;
+grid-template-columns:1.1fr 1fr;
+gap:18px;
+padding:.7rem 0;
+border-top:1px solid var(--line);
+}
+
+.students li:first-child{
+border-top:1px solid #111;
+}
+
+.student-name{
+color:var(--heading);
+}
+
+.student-now{
+color:var(--text-soft);
+}
+
+footer{
+margin-top:18px;
+color:var(--text-soft);
+font-size:.9rem;
+}
+
+/* logo aligned with layout bottom-right */
+
+.logo{
+display:block;
+margin-left:auto;
+margin-top:60px;
+width:80px;
+opacity:0.9;
+}
+
+@media (max-width:760px){
+
+header{
+grid-template-columns:1fr;
+}
+
+nav{
+align-items:start;
+}
+
+section{
+grid-template-columns:1fr;
+gap:10px;
+}
+
+.students li{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-  <h1>Just a place holder.</h1>
+
+<div class="page">
+
+<div class="topmark"></div>
+
+<header>
+
+<div>
+<h1>Krzysztof Janowicz</h1>
+
+<p class="intro">
+I am a professor in Spatial Data Science and GeoAI at the <a href="https://univie.ac.at/en/">University of Vienna, Austria</a>. Broadly speaking, my research is in (geographic) knowledge representation. This page contains only the
+essentials: a short yet personal  introduction, <b>key ideas</b>, and former students and postdocs; nevertheless, this page is probably out of date.
+</p>
+</div>
+
+<nav>
+<a href="#about">About me</a>
+<a href="#ideas">Key ideas</a>
+<a href="#students">Former students /postdocs</a>
+<a href="https://scholar.google.com/citations?user=6B2Z9vAAAAAJ&hl=en&oi=ao">Publications</a>
+<a href="https://ufind.univie.ac.at/de/person.html?id=1001662">Teaching</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<div>
+
+<p>
+My name is Krzysztof Janowicz. I am a professor at the University of Vienna working on Spatial Data Science and GeoAI. I am the head/chair of the Department of Geography and Regional Research, Editors-in-Chief of the Semantic Web journal by SAGE (formally IOS Press), and executive board member of Uni Vienna's Data Science Network. 
+</p>
+
+<p>
+Before returning to Europe, I have been a (assistant, associate, and full) professor of Geoinformatics at the Geography Department of the University of California, Santa Barbara (UCSB), USA. At UCSB I was director of the <a href="https://en.wikipedia.org/wiki/UCSB_Center_for_Spatial_Studies_and_Data_Science">Center for Spatial Studies</a> and former program chair of UCSB's Cognitive Science Program.  Before moving to the West Coast in 2011, I was an assistant professor at the GeoVISTA Center, Department of Geography at the Pennsylvania State University, USA. Having spend 13 years in the United States, I remain deeply connected to the American research community at UCSB and beyond, to my collaborators in industry, and to my former local community in Goleta, California.
+</p>
+
+<p>
+Prior to moving to the US, I was working as a postdoctoral researcher at the Institute for Geoinformatics (<a href="https://www.uni-muenster.de/Geoinformatics/">ifgi</a>), University of Münster in Germany for the international research training group on Semantic Integration of Geospatial Information and the Münster Semantic Interoperability Lab (MUSIL). I got my PhD in geoinformatics from the University of Münster in the summer of 2008. My doctoral advisor was Werner Kuhn, and more informally Martin Raubal. Together with TU Vienna's Andrew Frank they were instrumental in shaping my understanding and interest in formal (geographic) knowledge representation at the intersection of artificial intelligence and cognitive geography. 
+</p>
+
+<p>
+Methodologically, my niche is the combination of theory-driven (e.g., semantics) and data-driven (e.g., data mining) techniques in the broader realm of knowledge representation including work on knowledge graphs, geo-semantics, social sensing, and representation learning (GeoAI). I am particularly interested in studying how AI systems and humans represent geographic spaces and places and how these representations, in turn, shape our interaction with the world. 
+</p>
+
+<p>
+At its core, <b>representation</b> is never epistemically neutral, at least not from a constructivist and cognitivist viewpoint, as there are many ways to construct these representations. The way individuals, societies, or nowadays artificial agents construct (abstract) concepts such as Poverty or Forest but also vague cognitive regions (such as Southern California) is a function of their experiences, cultures, age, practices, political affiliations, current context, and so on. I have always been fascinated by this diversity of meaning and how to account for it computationally. 
+</p>
+
+<p>
+Hence, I always been drawn to topics such as similarity (and analogy) based reasoning, ontology alignment instead of singular (top-level) ontologies, social sensing, semantic signatures (i.e., early types of embeddings) and other observation and behavioral driven ways to computationally represent the variability in human conceptualizations bottom-up, and, more lately, to research in pluralistic AI alignment  and biases affecting AI systems.
+</p>
+
+
+
+</div>
+
+</section>
+
+<section id="ideas">
+
+<h2>Key ideas</h2>
+
+<div>
+
+<ul class="ideas">
+
+<li>
+<span class="idea-title">Geography according to foundation models</span>
+How can we know what AI will know and how will AI representations of geography shape our future interaction with the spaces and places around us.
+</li>
+
+<li>
+<span class="idea-title">Knowledge Graphs</span>
+Tbd
+</li>
+
+<li>
+<span class="idea-title">Semantic Signatures</span>
+Tbd
+</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="students">
+
+<h2>Former students & postdocs</h2>
+
+<div>
+
+<p>
+I am not good at small talk and may come across as out of sync; still, I do care deeply about people, especially my students and about fostering their careers.
+</p>
+
+<p>
+Over the years I have had the great privilege and pleasure of working with exceptionally gifted, thoughtful, caring, passionate, and intellectually curious students and young researchers -- whether undergraduate students, master's students, PhD students, or postdocs. Sparking their curiosity for science, strengthening their critical thinking, or encouraging them to take initiative in their lives is among the most rewarding experiences of being a professor, especially for students who might otherwise feel they do not quite belong.
+</p>
+
+<p>
+I greatly enjoy hearing from them, often years after graduation. I am not entirely sure why they sometimes share their successes with me or seek my advice in difficult moments; while I rarely have the answers they might hope for, I value their trust in reaching out.
+</p>
+
+
+<p>
+Below I list only former PhD students and postdocs whom I formally advised or (more informally) mentored. I am ommitting co-advised students at other host institutions without implying  they would matter less. The list is kept short, but many others have mattered greatly to the development of STKO; finally, a list including Master's students or our many international visiting students would simply be too long.
+</p>
+
+<ul class="students">
+
+<li>
+<div class="student-name"><a href="https://profiles.canterbury.ac.nz/Ben-Adams">Ben Adams</a></div>
+<div class="student-now">Professor at University of Canterbury, NZ </div>
+</li>
+
+<li>
+<div class="student-name"><a href="https://www.grantmckenzie.com/">Grant McKenzie</a></div>
+<div class="student-now">Professor at  McGill University, Canada</div>
+</li>
+
+<li>
+<div class="student-name"><a href="https://geography.wisc.edu/staff/gao-song/">Song Gao</a></div>
+<div class="student-now">Professor at University of Wisconsin Madison, USA</div>
+</li>
+
+
+<li>
+<div class="student-name"><a href="https://www.buffalo.edu/cas/geography/faculty/faculty_directory/yingjie-hu.html">Yingjie Hu</a></div>
+<div class="student-now">Professor at University at Buffalo, USA</div>
+</li>
+
+<li>
+<div class="student-name"><a href="https://scholar.google.com/citations?user=lL_-M7IAAAAJ&hl=en">Bo Yan</a></div>
+<div class="student-now">AI/ML Researcher at Google, USA</div>
+</li>
+
+<li>
+<div class="student-name"><a href="https://www.bristol.ac.uk/people/person/Rui-Zhu-8537f231-1192-41d4-b8ff-ddc52cca4dfb/">Rui Zhu </a></div>
+<div class="student-now">Senior Lecturer at University at Bristol, UK</div>
+</li>
+
+<li>
+<div class="student-name"><a href="https://scholar.google.com/citations?user=g3_HTWsAAAAJ&hl=en&oi=ao">Ling Cai</a></div>
+<div class="student-now">AI/ML Researcher at Bytedance, USA</div>
+</li>
+
+
+<li>
+<div class="student-name"><a href="https://gengchenmai.github.io/">Gengchen Mai </a></div>
+<div class="student-now">Professor at  University of Texas at Austin, USA</div>
+</li>
+
+<li>
+<div class="student-name"><a href="https://mcec.umaine.edu/home/faculty222/zhangyu-wang/">Zhangyu Wang </a></div>
+<div class="student-now">Professor at  University of Maine, USA</div>
+</li>
+
+<li>
+<div class="student-name"><a href="https://geography.unm.edu/people/faculty/faculty-profiles/marcela-suarez.html">Marcela Suárez </a></div>
+<div class="student-now">Professor at University of New Mexico, USA</div>
+</li>
+
+<li>
+<div class="student-name"><a href="https://scholar.google.com/citations?user=pw24NSgAAAAJ&hl=en&oi=ao">Meilin Shi </a></div>
+<div class="student-now">Senior Data Scientist at University of Liverpool, UK</div>
+</li>
+
+<li>
+<div class="student-name"><a href="https://www.tugraz.at/institute/ifg/research/geoinformation">Ivan Majic </a></div>
+<div class="student-now">Professor at Graz University of Technology, Austria </div>
+</li>
+
+<li>
+<div class="student-name"><a href="https://www.uu.nl/staff/SScheider">Simon Scheider </a></div>
+<div class="student-now">Professor at Utrecht University, NL (Simon was a self-funded visitor/postdoc)</div>
+</li>
+
+</ul>
+<p></p>
+
+<p>
+I had the distinct pleasure of sharing a department floor with Werner Kuhn, Mike Goodchild, Waldo Tobler, Helen Couclelis, Martin Raubal, Dan Montello, Alan MacEachren, Keith Clarke, and many others, and I am deeply grateful for having had this opportunity.
+</p>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<div>
+
+<p><strong>Affiliation:</strong> <br/> Department of Geography and Regional Research <br/> and Data Science Network, <br/>University of Vienna, Austria </p>
+
+</div>
+
+</section>
+
+<footer>
+Last updated 2026
+</footer>
+
+<img src="logo.jpg" class="logo">
+
+</div>
+
 </body>
 </html>
