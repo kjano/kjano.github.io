@@ -4,6 +4,10 @@ This site contains selected slides and materials from talks and keynotes. Most o
 
 Personally, I often find myself coming back to talks by others, as they frequently contain important lines of thinking that never make it into a paper but instead act as the glue for a broader research agenda. A wonderful example is **Frank van Harmelen’s** [ISWC 2011 keynote](https://www.cs.vu.nl/~frankh/spool/ISWC2011Keynote/). 
 
+## 2026
+
+- *[Full-Stack GeoAI: Building A World On Autopilot (Worth Living In)](COSIT_2026_Full_Stack_GeoAI_COSIT_2026_Keynote.pdf)*; COSIT 2026 Keynote, York, UK
+
 ## 2025
 
 - *[Can We Know What AI Will Know?](GIScience_2025_Keynote_Can_We_Know_What_AI_Will_Know_Online.pdf)*; GIScience 2025 Keynote, Christchurch, New Zealand
